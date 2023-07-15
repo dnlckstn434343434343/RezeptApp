@@ -17,16 +17,7 @@ init =
     { -- Initialisieren Sie hier Ihr Modell
     }
 
-update : Msg -> Model -> Model
-update msg model =
-    case msg of
-        SomeMessage ->
-            -- Aktualisieren Sie hier Ihr Modell basierend auf der Nachricht SomeMessage
-            model
 
-        AnotherMessage string ->
-            -- Aktualisieren Sie hier Ihr Modell basierend auf der Nachricht AnotherMessage
-            model
 
 type alias Model =
     {
@@ -43,5 +34,14 @@ view model =
         
         ]
 
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        SomeMessage ->
+            -- Aktualisieren Sie hier Ihr Modell basierend auf der Nachricht SomeMessage
+            model
 
+        AnotherMessage string ->
+            -- Aktualisieren Sie hier Ihr Modell basierend auf der Nachricht AnotherMessage
+            model
 
