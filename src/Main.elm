@@ -1,8 +1,8 @@
 module Main exposing (..)
 
 import Browser
-import Einkaufslisten
-import Lieblingsrezepte
+import Einkaufslisten exposing (..)
+import Lieblingsrezepte exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
