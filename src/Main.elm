@@ -48,9 +48,46 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ div [ ] [ Lieblingsrezepte.view model.lieblingsrezepteModel |> Html.map LieblingsrezepteMsg ]
-        , div [ ] [ Einkaufslisten.view model.einkaufslistenModel |> Html.map EinkaufslistenMsg ]
+        [ div [] [ Lieblingsrezepte.view model.lieblingsrezepteModel |> Html.map LieblingsrezepteMsg ]
+        , div [] [ Einkaufslisten.view model.einkaufslistenModel |> Html.map EinkaufslistenMsg ]
+        , a [ href "/index.html" ]
+            [ img [ class "img", src "./Bilder/Logo.jpg", alt "Logo" ] [] ]
+        , div [] []
+        , div [ class "header-links" ]
+            [ a [ href "/index.html" ] [ text "Startseite" ]
+            , a [ href "/lieblingsrezepte.html" ] [ text "Lieblingsrezepte" ]
+            , a [ href "/einkauflisten.html" ] [ text "Einkaufslisten" ]
+            ]
+        , div [] []
+        , h2 [] [ text "Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus." ]
+        , div [ class "svg-container" ]
+            [ div []
+                [ img
+                    [ class "svg"
+                    , src "./SVGs/breakfast.svg"
+                    ]
+                    []
+                , div [class "svg.Unterschrift"] [ text "Frühstück" ]
+                ]
+            , div []
+                [ img
+                    [ class "svg"
+                    , src "./SVGs/lunch.svg"
+                    ]
+                    []
+                , div [class "svg.Unterschrift"] [ text "Mittag-/Abendessen" ]
+                ]
+            , div []
+                [ img
+                    [ class "svg"
+                    , src "./SVGs/dessert.svg"
+                    ]
+                    []
+                , div [class "svg.Unterschrift"] [ text "Dessert/Süßes" ]
+                ]
+            ]
         ]
+
 
 
 

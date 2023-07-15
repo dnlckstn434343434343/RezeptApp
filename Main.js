@@ -5307,11 +5307,7 @@ var $author$project$Main$update = F2(
 				A2($elm$core$Platform$Cmd$map, $author$project$Main$EinkaufslistenMsg, einkaufslistenCmd));
 		}
 	});
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
-var $elm$html$Html$map = $elm$virtual_dom$VirtualDom$map;
-var $author$project$Einkaufslisten$availableFoodItems = _List_fromArray(
-	['apple', 'banana', 'carrot', 'tomato']);
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -5320,7 +5316,29 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			key,
 			$elm$json$Json$Encode$string(string));
 	});
+var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
+var $elm$html$Html$map = $elm$virtual_dom$VirtualDom$map;
+var $elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Einkaufslisten$availableFoodItems = _List_fromArray(
+	['apple', 'banana', 'carrot', 'tomato']);
 var $elm$svg$Svg$Attributes$class = _VirtualDom_attribute('class');
 var $elm$svg$Svg$Attributes$fill = _VirtualDom_attribute('fill');
 var $elm$svg$Svg$Attributes$fontSize = _VirtualDom_attribute('font-size');
@@ -5328,8 +5346,6 @@ var $elm$svg$Svg$Attributes$height = _VirtualDom_attribute('height');
 var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
 var $elm$svg$Svg$rect = $elm$svg$Svg$trustedNode('rect');
 var $elm$svg$Svg$svg = $elm$svg$Svg$trustedNode('svg');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$svg$Svg$Attributes$textAnchor = _VirtualDom_attribute('text-anchor');
 var $elm$svg$Svg$text_ = $elm$svg$Svg$trustedNode('text');
 var $elm$svg$Svg$Attributes$viewBox = _VirtualDom_attribute('viewBox');
@@ -5345,7 +5361,6 @@ var $author$project$Einkaufslisten$DragStart = function (a) {
 };
 var $author$project$Einkaufslisten$Drop = {$: 'Drop'};
 var $elm$html$Html$Attributes$draggable = _VirtualDom_attribute('draggable');
-var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
 };
@@ -5357,12 +5372,6 @@ var $elm$html$Html$Events$on = F2(
 			event,
 			$elm$virtual_dom$VirtualDom$Normal(decoder));
 	});
-var $elm$html$Html$Attributes$src = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'src',
-		_VirtualDom_noJavaScriptOrHtmlUri(url));
-};
 var $author$project$Einkaufslisten$viewFoodItem = F2(
 	function (_v0, item) {
 		var _v1 = _List_fromArray(
@@ -5495,7 +5504,6 @@ var $author$project$Einkaufslisten$view = function (model) {
 };
 var $author$project$Lieblingsrezepte$AddRecipe = {$: 'AddRecipe'};
 var $elm$html$Html$button = _VirtualDom_node('button');
-var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$Events$onClick = function (msg) {
 	return A2(
 		$elm$html$Html$Events$on,
@@ -5673,6 +5681,153 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$map,
 						$author$project$Main$EinkaufslistenMsg,
 						$author$project$Einkaufslisten$view(model.einkaufslistenModel))
+					])),
+				A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$href('/index.html')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('img'),
+								$elm$html$Html$Attributes$src('./Bilder/Logo.jpg'),
+								$elm$html$Html$Attributes$alt('Logo')
+							]),
+						_List_Nil)
+					])),
+				A2($elm$html$Html$div, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('header-links')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/index.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Startseite')
+							])),
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/lieblingsrezepte.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Lieblingsrezepte')
+							])),
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/einkauflisten.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Einkaufslisten')
+							]))
+					])),
+				A2($elm$html$Html$div, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$h2,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus.')
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('svg-container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/breakfast.svg')
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Frühstück')
+									]))
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/lunch.svg')
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Mittag-/Abendessen')
+									]))
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/dessert.svg')
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Dessert/Süßes')
+									]))
+							]))
 					]))
 			]));
 };
