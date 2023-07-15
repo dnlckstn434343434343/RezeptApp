@@ -1,6 +1,21 @@
+module Startseite exposing (..)
+
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Html.Events exposing (onClick)
+
+type alias Model = {}
+
+type Msg = NoOp
+
+
+init : Model
+init = {}
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        NoOp ->
+            model
 
 view : Model -> Html Msg
 view model =
@@ -20,7 +35,6 @@ view model =
                 [ img
                     [ class "svg"
                     , src "./SVGs/breakfast.svg"
-                    , onClick (SvgClicked 1)
                     ]
                     []
                 , div [class "svg.Unterschrift"] [ text "Frühstück" ]
@@ -29,7 +43,6 @@ view model =
                 [ img
                     [ class "svg"
                     , src "./SVGs/lunch.svg"
-                    , onClick (SvgClicked 2)
                     ]
                     []
                 , div [class "svg.Unterschrift"] [ text "Mittag-/Abendessen" ]
@@ -38,10 +51,10 @@ view model =
                 [ img
                     [ class "svg"
                     , src "./SVGs/dessert.svg"
-                    , onClick (SvgClicked 3)
                     ]
                     []
                 , div [class "svg.Unterschrift"] [ text "Dessert/Süßes" ]
                 ]
             ]
         ]
+

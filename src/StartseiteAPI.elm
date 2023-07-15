@@ -1,1 +1,0 @@
-module StartseiteAPI exposing (..)
