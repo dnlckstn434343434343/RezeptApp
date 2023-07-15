@@ -17,8 +17,6 @@ init =
     { -- Initialisieren Sie hier Ihr Modell
     }
 
-
-
 type alias Model =
     {
     }
@@ -30,9 +28,11 @@ type Msg
 view : Model -> Html Msg
 view model =
     div []
-        [ h2 [] [ text "Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus." ]
-        
+        [ a [ href "/Startseite.html" ]
+            [ img [ src "./Bilder/Logo.jpg", alt "Logo" ] [] ]
+        , h1 [] [ text "Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus." ]
         ]
+
 
 update : Msg -> Model -> Model
 update msg model =
