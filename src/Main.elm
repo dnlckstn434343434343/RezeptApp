@@ -1,30 +1,16 @@
-module Main exposing (main)
+module Main exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Browser
 
-main : Program () Model Msg
-main =
-    Browser.sandbox
-        { init = init
-        , update = update
-        , view = view
-        }
+type alias Model =
+    {
+    }
 
-type alias Model = {}
-
-type Msg = NoOp
-
-
-init : Model
-init = {}
-
-update : Msg -> Model -> Model
-update msg model =
-    case msg of
-        NoOp ->
-            model
+type Msg
+    = SomeMessage
+    | AnotherMessage String
 
 view : Model -> Html Msg
 view model =
