@@ -5183,13 +5183,20 @@ var $elm$browser$Browser$sandbox = function (impl) {
 };
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		if (msg.$ === 'SomeMessage') {
-			return model;
-		} else {
-			var string = msg.a;
-			return model;
+		switch (msg.$) {
+			case 'SomeMessage':
+				return model;
+			case 'AnotherMessage':
+				var string = msg.a;
+				return model;
+			default:
+				var _int = msg.a;
+				return model;
 		}
 	});
+var $author$project$Main$SvgClicked = function (a) {
+	return {$: 'SvgClicked', a: a};
+};
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -5200,8 +5207,10 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5209,6 +5218,23 @@ var $elm$html$Html$Attributes$href = function (url) {
 		_VirtualDom_noJavaScriptUri(url));
 };
 var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 'Normal', a: a};
+};
+var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var $elm$html$Html$Events$on = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$Normal(decoder));
+	});
+var $elm$html$Html$Events$onClick = function (msg) {
+	return A2(
+		$elm$html$Html$Events$on,
+		'click',
+		$elm$json$Json$Decode$succeed(msg));
+};
 var $elm$html$Html$Attributes$src = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5246,6 +5272,141 @@ var $author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus.')
+					])),
+				A2($elm$html$Html$div, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('header-links')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/index.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Startseite')
+							])),
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/lieblingsrezepte.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Lieblingsrezepte')
+							])),
+						A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('/einkauflisten.html')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Einkauflisten')
+							]))
+					])),
+				A2($elm$html$Html$div, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$h2,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus.')
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('svg-container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/breakfast.svg'),
+										$elm$html$Html$Events$onClick(
+										$author$project$Main$SvgClicked(1))
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Frühstück')
+									]))
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/lunch.svg'),
+										$elm$html$Html$Events$onClick(
+										$author$project$Main$SvgClicked(2))
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Mittag-/Abendessen')
+									]))
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg'),
+										$elm$html$Html$Attributes$src('./SVGs/dessert.svg'),
+										$elm$html$Html$Events$onClick(
+										$author$project$Main$SvgClicked(3))
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('svg.Unterschrift')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Dessert/Süßes')
+									]))
+							]))
 					]))
 			]));
 };
