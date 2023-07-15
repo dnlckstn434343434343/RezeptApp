@@ -5183,7 +5183,12 @@ var $elm$browser$Browser$sandbox = function (impl) {
 };
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		return model;
+		if (msg.$ === 'SomeMessage') {
+			return model;
+		} else {
+			var string = msg.a;
+			return model;
+		}
 	});
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$json$Json$Encode$string = _Json_wrap;
