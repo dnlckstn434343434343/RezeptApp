@@ -30,11 +30,11 @@ init =
 view : Model -> Html Msg
 view model =
     div []
-        [ a [ href "/" ] -- nur "/" ruft URL der aktuellen Seite auf
+        [ a [ href "/" ] 
             [ img [ src "./Bilder/Logo.jpg", alt "Logo" ] [] ]
         , div [] []
         , div [ class "header-links" ]
-            [ a [ href "/" ] [ text "Startseite" ] -- nur "/" ruft URL der aktuellen Seite auf
+            [ a [ href "/" ] [ text "Startseite" ] 
             , a [ href "/lieblingsrezepte.html" ] [ text "Lieblingsrezepte" ]
             , a [ href "/einkauflisten.html" ] [ text "Einkauflisten" ]
             ]
