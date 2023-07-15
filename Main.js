@@ -5200,9 +5200,8 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$html$Html$h2 = _VirtualDom_node('h2');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5228,7 +5227,7 @@ var $author$project$Main$view = function (model) {
 				$elm$html$Html$a,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$href('/index.html')
+						$elm$html$Html$Attributes$href('/Startseite.html')
 					]),
 				_List_fromArray(
 					[
@@ -5236,140 +5235,17 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$img,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('img'),
 								$elm$html$Html$Attributes$src('./Bilder/Logo.jpg'),
 								$elm$html$Html$Attributes$alt('Logo')
 							]),
 						_List_Nil)
 					])),
-				A2($elm$html$Html$div, _List_Nil, _List_Nil),
 				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('header-links')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$a,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$href('/index.html')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Startseite')
-							])),
-						A2(
-						$elm$html$Html$a,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$href('/lieblingsrezepte.html')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Lieblingsrezepte')
-							])),
-						A2(
-						$elm$html$Html$a,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$href('/einkauflisten.html')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Einkauflisten')
-							]))
-					])),
-				A2($elm$html$Html$div, _List_Nil, _List_Nil),
-				A2(
-				$elm$html$Html$h2,
+				$elm$html$Html$h1,
 				_List_Nil,
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Was kochst du heute? Klicke auf eine beliebige Kategorie und finde es heraus.')
-					])),
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('svg-container')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$img,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg'),
-										$elm$html$Html$Attributes$src('./SVGs/breakfast.svg')
-									]),
-								_List_Nil),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg.Unterschrift')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Frühstück')
-									]))
-							])),
-						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$img,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg'),
-										$elm$html$Html$Attributes$src('./SVGs/lunch.svg')
-									]),
-								_List_Nil),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg.Unterschrift')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Mittag-/Abendessen')
-									]))
-							])),
-						A2(
-						$elm$html$Html$div,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$img,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg'),
-										$elm$html$Html$Attributes$src('./SVGs/dessert.svg')
-									]),
-								_List_Nil),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('svg.Unterschrift')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Dessert/Süßes')
-									]))
-							]))
 					]))
 			]));
 };
